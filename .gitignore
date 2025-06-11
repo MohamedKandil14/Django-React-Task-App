@@ -1,57 +1,29 @@
-# Byte-code files
-*.pyc
-__pycache__/
-
-# Virtual Environment
-# Typically named 'venv' or 'env'. Add any other names you use.
-venv/
-env/
-.venv/ # Common for some tools
-
-# Database Files
-# SQLite database file. If you use PostgreSQL/MySQL in production,
-# you'll still likely have this for local development.
-db.sqlite3
-
-# Media and Static Files (User Uploads and collected static assets)
-# Media files uploaded by users
-media/
-# Collected static files (Django collects these into a single dir for deployment)
-staticfiles/
-
-# Environment Variables
-# Crucial for security! This holds your SECRET_KEY and other sensitive configs.
-.env
-.flaskenv # If by any chance you mix Python web frameworks
-
-# IDE and Editor Specific Files
-.idea/             # PyCharm specific files
-.vscode/           # VS Code specific files
-*.sublime-project  # Sublime Text project files
-*.sublime-workspace # Sublime Text workspace files
-.DS_Store          # macOS specific files
-Thumbs.db          # Windows specific files
-ehthumbs.db        # Windows specific files
-Desktop.ini        # Windows specific files
-
-# Log Files
+# General ignore patterns
+.DS_Store
+Thumbs.db
 *.log
-celerybeat.pid # If using Celery
-celeryd.log    # If using Celery
+.env
 
-# Pip-related files
-*.egg-info/
-.coverage
+# Django Backend specific files
+my_task_api/*.log
+my_task_api/*.pot
+my_task_api/*.pyc
+my_task_api/__pycache__/
+my_task_api/.Python
+my_task_api/db.sqlite3
+my_task_api/media/
+my_task_api/static/
+my_task_api/venv/ # Virtual environment for Django
 
-# Tests and testing artifacts
-.pytest_cache/
-htmlcov/
+# React Frontend specific files
+task-frontend/node_modules/
+task-frontend/build/ # Production build of React app
+task-frontend/npm-debug.log*
+task-frontend/yarn-debug.log*
+task-frontend/yarn-error.log*
 
-# Python build artifacts
-build/
-dist/
-
-# Miscellaneous
-*~                 # Backup files created by some editors (e.g., Vim)
-*.swp              # Vim swap files
-.python-version    # pyenv
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace

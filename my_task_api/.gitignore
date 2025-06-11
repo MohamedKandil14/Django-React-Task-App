@@ -1,0 +1,27 @@
+# Django specific files
+*.log
+*.pot
+*.pyc
+__pycache__/
+.Python
+db.sqlite3 # Your SQLite database
+media/
+static/
+venv/ # Virtual environment folder (important!)
+.env # Environment variables (if you use a .env file)
+
+# IDE specific files
+.idea/        # PyCharm / IntelliJ IDEA
+.vscode/      # VS Code
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Pipenv
+Pipfile.lock
+
+# Node (if you have frontend assets in backend)
+node_modules/
